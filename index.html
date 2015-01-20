@@ -9,16 +9,17 @@
       <h2>Select a song!</h2>
     </header>
 
-    <section id="player">
-
-    </section>
+    <div class="container">
+      <section id="player">
+      </section>
+    </div>
 
     <script type="text/template" id="playerTemplate">
       {{#tracks}}
         <article class="ui segment">
           <div class="ui vertical segment">
             <h2>
-              <i class="play icon"></i>
+              <i class="icon play"></i>
               {{title}} by {{artist}}
               <audio src=""></audio>
             </h2>
