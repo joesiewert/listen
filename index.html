@@ -6,7 +6,7 @@
   </head>
   <body>
     <header data-header="playerHeader">
-      <h2>Select a song!</h2>
+      <h2>Select a track!</h2>
     </header>
 
     <section data-body="player">
@@ -17,9 +17,9 @@
         <article class="ui segment">
           <div class="ui vertical segment">
             <h2>
-              <i class="icon play"></i>
+              <i data-id="{{id}}" class="icon play"></i>
               {{title}} by {{artist}}
-              <audio src="tracks/{{file}}.mp3"></audio>
+              <audio src="tracks/{{file}}.mp3" preload="none"></audio>
             </h2>
           </div>
         </article>
