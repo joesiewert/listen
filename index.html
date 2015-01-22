@@ -5,16 +5,14 @@
     <link rel="stylesheet" type="text/css" href="bower_components/semantic-ui/dist/semantic.min.css">
   </head>
   <body>
-    <header id="playerHeader">
+    <header data-header="playerHeader">
       <h2>Select a song!</h2>
     </header>
 
-    <div class="container">
-      <section id="player">
-      </section>
-    </div>
+    <section data-body="player">
+    </section>
 
-    <script type="text/template" id="playerTemplate">
+    <script type="text/template" data-template="playerTemplate">
       {{#tracks}}
         <article class="ui segment">
           <div class="ui vertical segment">
