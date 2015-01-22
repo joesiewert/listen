@@ -11,21 +11,17 @@ $(document).ready(function() {
     $('.icon').removeClass('pause').addClass('play');
     $(this).removeClass('play').addClass('pause');
 
-    $('audio').each(function(i, element) {
-      element.pause();
-    });
+    var file = 'tracks/' + $(this).attr("data-track") + '.mp3';
+    $('audio').attr('src', file);
 
-    var id = $(this).data('id');
-    var track = document.getElementsByTagName('audio')[id];
-    track.load();
+    var track = document.getElementsByTagName('audio')[0];
     track.play();
   });
 
   $("[data-body='player']").on('click', '.pause', function() {
     $(this).removeClass('pause').addClass('play');
 
-    var id = $(this).data('id');
-    var track = document.getElementsByTagName('audio')[id];
+    var track = document.getElementsByTagName('audio')[0];
     track.pause();
   });
 
