@@ -3,26 +3,25 @@
   <head>
     <title>Listen</title>
     <link rel="stylesheet" type="text/css" href="bower_components/semantic-ui/dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="app.css">
   </head>
   <body>
-    <header data-header="playerHeader">
-      <h2>Select a track!</h2>
+    <header id="playerHeader" class="ui black message track-header">
+      <h2>Select a song!</h2>
     </header>
 
-    <section data-body="player">
+    <section id="player">
     </section>
 
-    <script type="text/template" data-template="playerTemplate">
+    <script type="text/template" id="playerTemplate">
       <audio src="" preload="none"></audio>
       {{#tracks}}
-        <article class="ui segment">
-          <div class="ui vertical segment">
-            <h2>
-              <i data-track="{{file}}" data-title="{{title}}" class="icon play"></i>
-              {{title}} by {{artist}}
-            </h2>
-          </div>
-        </article>
+        <div class="ui vertical segment track">
+          <h2>
+            <i data-title="{{title}}" data-file="{{file}}" class="icon play"></i>
+            {{title}} by {{artist}}
+          </h2>
+        </div>
       {{/tracks}}
     </script>
 
